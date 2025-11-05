@@ -1,59 +1,32 @@
-# ConceitosBasicos
+# 🛒 Lista de Compras
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
+Um pequeno projeto feito em **Angular 19** para treinar conceitos básicos como **componentes standalone**, **data binding**, **event binding** e **loops com @for**.  
+O objetivo é permitir adicionar itens a uma lista de compras e visualizar tudo de forma simples e responsiva.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Tecnologias utilizadas
 
-```bash
-ng serve
-```
+- [Angular 19](https://angular.dev)
+- HTML5 / SCSS
+- TypeScript
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 💡 Funcionalidades
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+✅ Adicionar novos itens à lista  
+✅ Exibir os itens em uma tabela organizada  
+✅ Marcar itens como comprados (com checkbox)  
+✅ Campo para indicar a quantidade  
+✅ Layout responsivo para celular e desktop  
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🧩 Estrutura principal
 
-```bash
-ng generate --help
-```
+- `lista-compras.component.ts` → Lógica e comportamento do componente  
+- `lista-compras.component.html` → Estrutura da página  
+- `lista-compras.component.scss` → Estilos e layout  
+- `itemLista.ts` → Classe que representa cada item (id, nome, quantidade, comprado)
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
