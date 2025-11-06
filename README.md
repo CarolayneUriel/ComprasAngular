@@ -19,7 +19,8 @@ O objetivo é permitir adicionar itens a uma lista de compras e visualizar tudo 
 ✅ Exibir os itens em uma tabela organizada  
 ✅ Marcar itens como comprados (com checkbox)  
 ✅ Campo para indicar a quantidade  
-✅ Layout responsivo para celular e desktop  
+✅ Layout responsivo para celular e desktop
+✅ Atualiza o Id do item na lista de forma dinâmica
 
 ---
 

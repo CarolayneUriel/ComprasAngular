@@ -15,15 +15,22 @@ export class ListaComprasComponent {
   quantidade: number | null = null;
   lista: ItemLista[] = [];
 
-  ngOnInit() {
-    const dados = localStorage.getItem('listaCompras');
+ ngOnInit() {
+    let userId = localStorage.getItem('userId');
+    if (!userId) {
+      userId = 'user-' + Math.random().toString(36).substring(2, 10);
+      localStorage.setItem('userId', userId);
+    }
+
+    const dados = localStorage.getItem(`listaCompras-${userId}`);
     if (dados) {
       this.lista = JSON.parse(dados);
     }
   }
 
   salvarLista() {
-    localStorage.setItem('listaCompras', JSON.stringify(this.lista));
+    const userId = localStorage.getItem('userId');
+    localStorage.setItem(`listaCompras-${userId}`, JSON.stringify(this.lista));
   }
 
   adicionarItem() {

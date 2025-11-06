@@ -106,3 +106,37 @@ input[type='checkbox'] {
   color: gray;
   opacity: 0.7;
 }
+
+@media (max-width: 366px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 6px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .table-container {
+    overflow-x: scroll;
+  }
+}
+
