@@ -30,3 +30,4 @@ O objetivo é permitir adicionar itens a uma lista de compras e visualizar tudo 
 - `lista-compras.component.scss` → Estilos e layout  
 - `itemLista.ts` → Classe que representa cada item (id, nome, quantidade, comprado)
 
+[Clique aqui!](https://compras-angular.vercel.app/)
