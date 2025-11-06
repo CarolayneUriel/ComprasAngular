@@ -46,8 +46,13 @@ export class ListaComprasComponent {
   }
 
   removerItem(id: number | undefined) {
-    this.lista = this.lista.filter(i => i.id !== id);
-    this.salvarLista();
-  }
+  this.lista = this.lista.filter(i => i.id !== id);
+  this.lista.forEach((item, index) => {
+    item.id = index + 1;
+  });
+
+  this.salvarLista();
+}
+
 
 }

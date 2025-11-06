@@ -1,6 +1,6 @@
 <section>
   <div class="container">
-    <h1>Lista de compras</h1>
+    <h1>Lista de Compras</h1>
 
     <form #Frm="ngForm" class="add-item-form" (ngSubmit)="adicionarItem()">
       <input
@@ -9,6 +9,7 @@
         name="item"
         [(ngModel)]="item"
         placeholder="Digite o nome do item"
+        required
       />
 
       <input
@@ -23,19 +24,20 @@
       <button type="submit">Adicionar</button>
     </form>
 
-    <table>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Item</th>
-          <th>Qtd</th>
-          <th>Comprado</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Item</th>
+            <th>Qtd</th>
+            <th>Comprado</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
 
-      <tbody>
-        @for (elemento of lista; track elemento.id) {
+        <tbody>
+          @for (elemento of lista; track elemento.id) {
           <tr [class.comprado]="elemento.comprado">
             <td>{{ elemento.id }}</td>
             <td>{{ elemento.nome }}</td>
@@ -48,13 +50,12 @@
               />
             </td>
             <td>
-              <button type="button" (click)="removerItem(elemento.id)">
-                ❌
-              </button>
+              <button type="button" (click)="removerItem(elemento.id)">❌</button>
             </td>
           </tr>
-        }
-      </tbody>
-    </table>
+          }
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
