@@ -13,13 +13,13 @@
       />
 
       <input
-        type="number"
+        type="text"
         id="quantidade"
         name="quantidade"
         [(ngModel)]="quantidade"
-        placeholder="Qtd"
-        min="1"
+        placeholder="Ex: 5, 2kg, 3 unid."
       />
+
 
       <button type="submit">Adicionar</button>
     </form>
@@ -38,21 +38,22 @@
 
         <tbody>
           @for (elemento of lista; track elemento.id) {
-          <tr [class.comprado]="elemento.comprado">
-            <td>{{ elemento.id }}</td>
-            <td>{{ elemento.nome }}</td>
-            <td>{{ elemento.quantidade }}</td>
-            <td>
-              <input
-                type="checkbox"
-                [checked]="elemento.comprado"
-                (change)="marcarComoComprado(elemento)"
-              />
-            </td>
-            <td>
-              <button type="button" (click)="removerItem(elemento.id)">❌</button>
-            </td>
-          </tr>
+            <tr [class.comprado]="elemento.comprado">
+              <td>{{ elemento.id }}</td>
+              <td>{{ elemento.nome }}</td>
+              <td>{{ elemento.quantidade }}</td>
+              <td>
+                <input
+                  type="checkbox"
+                  [checked]="elemento.comprado"
+                  (change)="marcarComoComprado(elemento)"
+                />
+              </td>
+
+              <td>
+                <button type="button" (click)="removerItem(elemento.id)">❌</button>
+              </td>
+            </tr>
           }
         </tbody>
       </table>

@@ -1,6 +1,6 @@
 export class ItemLista{
     id?: number;
     nome?: string;
-    quantidade?: number;
+    quantidade?: string;
     comprado: boolean = false;
 }

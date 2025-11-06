@@ -12,7 +12,7 @@ import {ItemLista} from './itemLista';
 })
 export class ListaComprasComponent {
   item: string = '';
-  quantidade: number | null = null;
+  quantidade: string = '';
   lista: ItemLista[] = [];
 
  ngOnInit() {
@@ -36,15 +36,19 @@ export class ListaComprasComponent {
   adicionarItem() {
     if (!this.item.trim()) return;
 
+    if (!this.quantidade.trim()) {
+      this.quantidade = '1 unid';
+    }
+
     const novoItem = new ItemLista();
     novoItem.id = this.lista.length + 1;
     novoItem.nome = this.item;
-    novoItem.quantidade = this.quantidade || 1;
+    novoItem.quantidade = this.quantidade.trim() || '1';
     this.lista.push(novoItem);
     this.salvarLista();
 
     this.item = '';
-    this.quantidade = null;
+    this.quantidade = '';
   }
 
   marcarComoComprado(item: ItemLista) {
