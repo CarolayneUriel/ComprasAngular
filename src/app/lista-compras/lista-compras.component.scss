@@ -42,12 +42,14 @@ input {
   border: 2px solid #007bff;
   border-radius: 6px;
   font-size: 16px;
+
+  &:focus {
+    outline: none;
+    border-color: #0056b3;
+  }
+
 }
 
-input:focus {
-  outline: none;
-  border-color: #0056b3;
-}
 
 button {
   padding: 10px 20px;
@@ -58,21 +60,25 @@ button {
   font-size: 16px;
   cursor: pointer;
   transition: background 0.3s;
-}
 
-button:hover {
-  background: #0056b3;
+  &:hover {
+    background: #0056b3;
+  }
 }
 
 .table-wrapper {
+  width: 100%;
+  overflow-x: auto;
   overflow-y: auto;
   flex: 1;
   max-height: 55vh;
   border-radius: 8px;
+  -webkit-overflow-scrolling: touch;
 }
 
 table {
   width: 100%;
+  min-width: 320px;
   border-collapse: collapse;
 
   th {
@@ -107,7 +113,8 @@ input[type='checkbox'] {
   opacity: 0.7;
 }
 
-@media (max-width: 380px) {
+
+@media (max-width: 580px) {
   .container {
     width: 95%;
     padding: 10px;
@@ -117,35 +124,31 @@ input[type='checkbox'] {
     font-size: 20px;
   }
 
-  table {
-    font-size: 12px;
-
-    button{
-      width: 10vw;
-    }
-  }
-
-  th, td {
-    padding: 6px;
-  }
-
-
-  .table-container {
-    overflow-x: scroll;
-  }
-}
-
-@media (max-width: 380px) {
   .add-item-form {
     display: grid;
     place-items: center;
     gap: 10px;
   }
 
-  input, button {
-    width: 80%;
+  input,
+  button {
+    width: 85%;
     font-size: 14px;
     padding: 8px;
+  }
+
+  table {
+    font-size: 12px;
+    min-width: 320px;
+
+    button{
+      width: 9vw;
+    }
+  }
+
+  th,
+  td {
+    padding: 6px;
   }
 }
 
