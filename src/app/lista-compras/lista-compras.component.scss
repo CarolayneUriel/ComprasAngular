@@ -3,15 +3,16 @@ section {
   justify-content: center;
   align-items: center;
   height: 90vh;
+  background-color: #F5F7F2;
 }
 
 .container {
-  background-color: #e7e5e5;
+  background-color: #E9F5E1;
   border-radius: 12px;
   box-shadow: 8px 8px 16px #858484cc;
   padding: 20px 30px;
   text-align: center;
-  width: 75vh;
+  width: 90vh;
   max-height: 85vh;
   display: flex;
   flex-direction: column;
@@ -33,36 +34,66 @@ section {
       justify-content: center;
       align-items: center;
     }
+
+    .button-group {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .button-group button {
+      flex: 0 0 auto;
+      min-width: 110px;
+    }
+
+    .button-group .btn-limpar {
+      background-color: #FFA726;
+      color: #333333;
+    }
+
+    .button-group .btn-limpar:hover {
+      background-color: #FB8C00;
+    }
+
+    @media (max-width: 580px) {
+      .button-group {
+        width: 85%;
+        flex-direction: column;
+      }
+
+      .button-group button {
+        width: 100%;
+        min-width: 0;
+      }
+    }
   }
 }
 
 input {
   flex: 1;
   padding: 10px;
-  border: 2px solid #007bff;
+  border: 2px solid #4CAF50;
   border-radius: 6px;
   font-size: 16px;
 
   &:focus {
     outline: none;
-    border-color: #0056b3;
+    border-color: #388E3C;
   }
-
 }
-
 
 button {
   padding: 10px 20px;
   border: none;
   border-radius: 6px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #4CAF50;
+  color: #333333;
   font-size: 16px;
   cursor: pointer;
   transition: background 0.3s;
 
   &:hover {
-    background: #0056b3;
+    background: #388E3C;
   }
 }
 
@@ -82,8 +113,12 @@ table {
   border-collapse: collapse;
 
   th {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #4CAF50;
+    color: #333333;
+  }
+
+  button{
+    background-color: #FFA726;
   }
 }
 
@@ -113,7 +148,6 @@ input[type='checkbox'] {
   opacity: 0.7;
 }
 
-
 @media (max-width: 580px) {
   .container {
     width: 95%;
@@ -141,7 +175,7 @@ input[type='checkbox'] {
     font-size: 12px;
     min-width: 320px;
 
-    button{
+    button {
       width: 9vw;
     }
   }
@@ -151,4 +185,3 @@ input[type='checkbox'] {
     padding: 6px;
   }
 }
-

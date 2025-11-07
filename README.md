@@ -22,6 +22,8 @@ O objetivo é permitir que o usuário adicione itens a uma lista de compras, mar
 
 ✅ Excluir itens individualmente
 
+✅ Excluir todos os itens
+
 ✅ IDs atualizados dinamicamente após exclusões
 
 ✅ Armazenamento local com localStorage, mantendo a lista ao atualizar a página
@@ -29,6 +31,8 @@ O objetivo é permitir que o usuário adicione itens a uma lista de compras, mar
 ✅ Cada usuário possui sua própria lista exclusiva
 
 ✅ Layout responsivo para celulares e desktops
+
+
 
 🧩 Estrutura principal
 
